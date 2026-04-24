@@ -4,15 +4,15 @@
 Los algoritmos son una parte esencial de la informática y la programación porque permiten desarrollar soluciones estructuradas y eficientes para distintos problemas.
 
 ## Principales razones de su importancia
-#### 1. Resolución de problemas
+### 1. Resolución de problemas
 Permiten transformar problemas complejos en procesos organizados y fáciles de ejecutar.
-#### 2. Base de la programación
+### 2. Base de la programación
 Todo programa informático funciona gracias a algoritmos implementados mediante código.
-#### 3. Optimización de recursos
+### 3. Optimización de recursos
 Un buen algoritmo reduce el tiempo de ejecución y el consumo de memoria.
-#### 4. Automatización
+### 4. Automatización
 Ayudan a automatizar tareas repetitivas, mejorando la productividad y disminuyendo errores humanos.
-#### 5. Escalabilidad
+### 5. Escalabilidad
 Los algoritmos eficientes permiten que las aplicaciones funcionen correctamente incluso con grandes cantidades de datos.
 
 # 2. Conceptos de Eficiencia en Algoritmos
