@@ -96,7 +96,7 @@ Se calcula considerando una distribución promedio de los datos de entrada.
 
 ---
 
-# Big O, Ω, Θ
+# 5. Big O, Ω, Θ
 
 ## Big O (O) — Cota superior
 La notación Big O describe el límite superior del tiempo de ejecución de un algoritmo.
@@ -111,7 +111,7 @@ La notación Θ (Theta) describe el comportamiento exacto del algoritmo cuando e
 
 Es decir, cuando el algoritmo tiene el mismo comportamiento en el mejor, peor y caso promedio (o muy similar).
 
-## 5. Tipos de Complejidad
+## Tipos de Complejidad
 
 ### O(1) — Constante
 El algoritmo siempre tarda lo mismo, sin importar cuántos datos haya.
@@ -184,7 +184,7 @@ Divide el problema y luego recorre
 
 ---
 
-## 6. Conclusiones
+# 6. Conclusiones
 
 ### ¿Qué complejidad es más costosa y por qué?
 De las complejidades analizadas, la más costosa fue O(n²) o complejidad cuadrática. Esto se debe a que utiliza ciclos anidados, provocando que el número de operaciones aumente rápidamente conforme crece la cantidad de datos. Por ejemplo, si un algoritmo O(n²) trabaja con 10 datos realiza muchas menos operaciones que cuando trabaja con 1000 datos, ya que el crecimiento no es proporcional, sino cuadrático. Esto hace que el tiempo de ejecución aumente considerablemente y el rendimiento disminuya en grandes volúmenes de información.
