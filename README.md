@@ -1,84 +1,112 @@
 # La Teoria de la Complejidad
 
-## 1. Importancia de los algoritmos
+# 1. Importancia de los algoritmos
 Los algoritmos son una parte esencial de la informática y la programación porque permiten desarrollar soluciones estructuradas y eficientes para distintos problemas.
 
-Principales razones de su importancia
-1. Resolución de problemas
+## Principales razones de su importancia
+### 1. Resolución de problemas
 Permiten transformar problemas complejos en procesos organizados y fáciles de ejecutar.
-2. Base de la programación
+### 2. Base de la programación
 Todo programa informático funciona gracias a algoritmos implementados mediante código.
-3. Optimización de recursos
+### 3. Optimización de recursos
 Un buen algoritmo reduce el tiempo de ejecución y el consumo de memoria.
-4. Automatización
+### 4. Automatización
 Ayudan a automatizar tareas repetitivas, mejorando la productividad y disminuyendo errores humanos.
-5. Escalabilidad
+### 5. Escalabilidad
 Los algoritmos eficientes permiten que las aplicaciones funcionen correctamente incluso con grandes cantidades de datos.
 
-### 2. Conceptos de Eficiencia en Algoritmos
-¿Qué es un algoritmo eficiente?
+# 2. Conceptos de Eficiencia en Algoritmos
+
+##¿Qué es un algoritmo eficiente?
 
 Un algoritmo eficiente es aquel que resuelve un problema correctamente utilizando la menor cantidad posible de tiempo y memoria.
 
 Su objetivo es optimizar recursos, evitando operaciones innecesarias y mejorando el rendimiento.
 
-Coste temporal
+---
+
+## Coste temporal
 
 El coste temporal mide el tiempo que tarda un algoritmo en ejecutarse según el tamaño de la entrada (n).
 
 Se expresa generalmente con notación Big O para analizar cómo crece el tiempo al aumentar los datos.
 
-Coste espacial
+---
+
+## Coste espacial
 
 El coste espacial representa la cantidad de memoria que utiliza un algoritmo durante su ejecución.
 
-Incluye variables, estructuras de datos y espacio adicional requerido para resolver el problema.
+Incluye:
+- Variables
+- Estructuras de datos 
+- Espacio adicional requerido para resolver el problema.
 
-Ejemplo (O(n))
+---
+
+## Ejemplo (O(n))
 
 Este ejemplo muestra una búsqueda lineal en un arreglo de objetos Persona.
 
 En el peor caso, se recorre toda la lista, por lo que su complejidad es O(n).
 
-#### 3. Factores de tiempo de ejecucion
+# 3. Factores de tiempo de ejecucion
 
  Factores propios: Son principalmente los que dependen del programa, como la estructura y la calidad del codigo e incluso el lenguaje de programación.
 
-Factores circunstanciales: Son más externos y no dependen del programa en si, incluyen el sistema operativo, el hardware o carga del sistema.
+## Factores circunstanciales: 
+Son más externos y no dependen del programa en si, incluyen el sistema operativo, el hardware o carga del sistema.
 
-Análisis Teórico: Es el análisis sin ejecutar el código, se puede analizar cuantas veces se repite un bucle con matemáticas, no dependiendo de la computadora.
+## Análisis Teórico: 
+Es el análisis sin ejecutar el código, se puede analizar cuantas veces se repite un bucle con matemáticas, no dependiendo de la computadora.
 
-Análisis Experimental: Es el que mas lo comprueba lo que pasa cuando se ejecuta el código, midiendo el tiempo real con ayuda de la computadora.
+## Análisis Experimental: 
+Es el que mas lo comprueba lo que pasa cuando se ejecuta el código, midiendo el tiempo real con ayuda de la computadora.
 
-##### 4. Notación Big O
-1. ¿Qué es?
+---
+
+# 4. Notación Big O
+## 1. ¿Qué es?
 La notación Big O es una herramienta utilizada en la teoría de la complejidad para describir el comportamiento del tiempo de ejecución de un algoritmo en función del tamaño de la entrada, representado como n.
 
 Su objetivo principal es analizar cómo crece el tiempo o el número de operaciones cuando aumenta la cantidad de datos.
 
 No mide el tiempo exacto en segundos, sino el orden de crecimiento, ignorando constantes y detalles menores.
-2. Mejor caso
+
+---
+
+## 2. Mejor caso
 El mejor caso representa la situación en la que el algoritmo se ejecuta bajo las condiciones más favorables posibles.
 
 En este caso, el algoritmo realiza la menor cantidad de operaciones.
-3. Peor caso
+
+---
+
+## 3. Peor caso
 El peor caso describe el escenario en el que el algoritmo necesita realizar la mayor cantidad de operaciones posibles.
 
 Es el análisis más importante, ya que garantiza el rendimiento máximo que puede llegar a tomar.
-4. Caso promedio
+
+---
+
+## 4. Caso promedio
 El caso promedio representa el comportamiento esperado del algoritmo bajo condiciones normales.
 
 Se calcula considerando una distribución promedio de los datos de entrada.
+
+---
+
 # Big O, Ω, Θ
-# Big O (O) — Cota superior
+
+## Big O (O) — Cota superior
 La notación Big O describe el límite superior del tiempo de ejecución de un algoritmo.
 
 Es decir, indica el máximo número de operaciones que un algoritmo puede realizar en el peor de los casos.
-# Omega (Ω) — Cota inferior
+## Omega (Ω) — Cota inferior
 La notación Ω (Omega) describe el límite inferior del tiempo de ejecución.
 
 Indica el mínimo número de operaciones que un algoritmo puede realizar en el mejor de los casos.
-# Theta (Θ) — Cota exacta
+## Theta (Θ) — Cota exacta
 La notación Θ (Theta) describe el comportamiento exacto del algoritmo cuando el crecimiento del tiempo está acotado tanto por arriba como por abajo.
 
 Es decir, cuando el algoritmo tiene el mismo comportamiento en el mejor, peor y caso promedio (o muy similar).
@@ -97,6 +125,8 @@ No depende del tamaño de entrada
 Es la más rápida
 Revisa cada elemento
 
+---
+
 ### O(n) — Lineal
 El tiempo crece según la cantidad de datos.
 
@@ -108,6 +138,8 @@ Recorrer un arreglo con un for
 Si hay más datos → tarda más
 Va uno por uno
 Revisa cada elemento
+
+---
 
 ### O(n²) — Cuadrática
 El tiempo crece muy rápido porque se repiten procesos dentro de otros.
@@ -121,6 +153,8 @@ Suele tener dos ciclos (for)
 Muy ineficiente con muchos datos
 Por cada elemento, revisa todos otra vez
 
+---
+
 ### O(log n) — Logarítmica
 Reduce el problema a la mitad en cada paso.
 
@@ -132,6 +166,8 @@ Si es menor → vas a 25
 No revisa todo
 Divide y conquista
 Cada paso elimina la mitad de los datos
+
+---
 
 ### O(n log n)
 
@@ -145,6 +181,8 @@ Un for + algo que divide entre 2
 Mezcla recorrer + dividir
 Muy usado en algoritmos de ordenamiento
 Divide el problema y luego recorre
+
+---
 
 ## 6. Conclusiones
 
