@@ -13,7 +13,7 @@ public class App {
         new ComplejidadLineal().ejemplo();
         System.out.println("");
         System.out.println("Complejidad O(n log n)");
-        EjemploNlogN obj = new EjemploNlogN();
+        ComplejidadNlogN obj = new ComplejidadNlogN();
         obj.ejecutar();
     }
 }
