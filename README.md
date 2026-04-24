@@ -1,18 +1,14 @@
-## Getting Started
+# La Teoria de la Complejidad
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 3. Factores de tiempo de ejecucion
 
-## Folder Structure
+ Factores propios: Son principalmente los que dependen del programa, como la estructura y la calidad del codigo e incluso el lenguaje de programación.
 
-The workspace contains two folders by default, where:
+Factores circunstanciales: Son más externos y no dependen del programa en si, incluyen el sistema operativo, el hardware o carga del sistema.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Análisis Teórico: Es el análisis sin ejecutar el código, se puede analizar cuantas veces se repite un bucle con matemáticas, no dependiendo de la computadora.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Análisis Experimental: Es el que mas lo comprueba lo que pasa cuando se ejecuta el código, midiendo el tiempo real con ayuda de la computadora.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
 
-## Dependency Management
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
