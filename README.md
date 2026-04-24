@@ -83,7 +83,7 @@ La notación Θ (Theta) describe el comportamiento exacto del algoritmo cuando e
 
 Es decir, cuando el algoritmo tiene el mismo comportamiento en el mejor, peor y caso promedio (o muy similar).
 
-###### 5. Tipos de Complejidad
+## 5. Tipos de Complejidad
 
 ### O(1) — Constante
 El algoritmo siempre tarda lo mismo, sin importar cuántos datos haya.
@@ -146,5 +146,17 @@ Mezcla recorrer + dividir
 Muy usado en algoritmos de ordenamiento
 Divide el problema y luego recorre
 
+## 5. Conclusiones
 
+### ¿Qué complejidad es más costosa y por qué?
+De las complejidades analizadas, la más costosa fue O(n²) o complejidad cuadrática. Esto se debe a que utiliza ciclos anidados, provocando que el número de operaciones aumente rápidamente conforme crece la cantidad de datos. Por ejemplo, si un algoritmo O(n²) trabaja con 10 datos realiza muchas menos operaciones que cuando trabaja con 1000 datos, ya que el crecimiento no es proporcional, sino cuadrático. Esto hace que el tiempo de ejecución aumente considerablemente y el rendimiento disminuya en grandes volúmenes de información.
+
+### ¿Qué aprendieron del análisis?
+Durante el desarrollo del proyecto aprendimos que no basta con que un programa funcione correctamente, sino que también es importante analizar su eficiencia. También aprendimos a relacionar la teoría de la complejidad con código real en Java, identificando cómo crece el número de operaciones según el tamaño de los datos de entrada. Además, entendimos la importancia de optimizar algoritmos para mejorar el rendimiento de los programas y reducir el consumo de recursos.
+
+### ¿Qué les sorprendió más al ver el código?
+Lo que más nos sorprendió fue observar cómo pequeños cambios en la estructura del código pueden generar diferencias muy grandes en el rendimiento. Por ejemplo, vimos que un algoritmo O(log n) puede ser mucho más rápido que uno O(n), incluso cuando ambos resuelven el mismo problema. También llamó la atención cómo los ciclos anidados aumentan rápidamente la cantidad de operaciones realizadas.
+
+### Reflexión adicional
+Este proyecto permitió fortalecer tanto el pensamiento lógico como la capacidad de análisis en programación. A través del estudio de las complejidades se logró comprender que el desarrollo de software requiere no solo escribir código, sino también evaluar su comportamiento y rendimiento. Concluimos que el análisis de complejidad es una herramienta fundamental en la informática, ya que permite desarrollar soluciones más eficientes, escalables y optimizadas para problemas reales.
 

@@ -3,7 +3,9 @@ public class App {
         // new ComplejidadConstante().ejemplo();
         // new ComplejidadLineal().ejemplo();
         new ComplejidadCuadratica().ejemplo();
-        // new ComplejidadLogaritmica().ejemplo();
-        // new ComplejidadNLogN().ejemplo();
+        new ComplejidadLogaritmica().Ejemplo();
+        
+        EjemploNlogN obj = new EjemploNlogN();
+        obj.ejecutar();
     }
 }
