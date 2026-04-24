@@ -146,7 +146,7 @@ Mezcla recorrer + dividir
 Muy usado en algoritmos de ordenamiento
 Divide el problema y luego recorre
 
-## 5. Conclusiones
+## 6. Conclusiones
 
 ### ¿Qué complejidad es más costosa y por qué?
 De las complejidades analizadas, la más costosa fue O(n²) o complejidad cuadrática. Esto se debe a que utiliza ciclos anidados, provocando que el número de operaciones aumente rápidamente conforme crece la cantidad de datos. Por ejemplo, si un algoritmo O(n²) trabaja con 10 datos realiza muchas menos operaciones que cuando trabaja con 1000 datos, ya que el crecimiento no es proporcional, sino cuadrático. Esto hace que el tiempo de ejecución aumente considerablemente y el rendimiento disminuya en grandes volúmenes de información.
