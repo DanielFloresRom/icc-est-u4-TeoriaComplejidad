@@ -1,4 +1,4 @@
-# Complejidad O(n) – Lineal
+# 1.Complejidad O(n) – Lineal
 
 La complejidad O(n) (lineal) describe algoritmos cuyo tiempo de ejecución crece de forma proporcional a medida que aumenta el tamaño de los datos.
 
