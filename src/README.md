@@ -1,175 +1,207 @@
-# 1. Complejidad O(log n) – Logarítmica
-La complejidad O(log n) (logarítmica) describe algoritmos cuyo tiempo de ejecución crece de forma muy lenta a medida que aumenta el tamaño de los datos.
+# Complejidad O(n) – Lineal
 
-En este caso, se implementa una búsqueda binaria, que es un algoritmo eficiente para encontrar un elemento dentro de un arreglo ordenado. En lugar de recorrer todos los elementos uno por uno, el algoritmo analiza el elemento central y, dependiendo del resultado, descarta la mitad de los datos en cada iteración.
+La complejidad O(n) (lineal) describe algoritmos cuyo tiempo de ejecución crece de forma proporcional a medida que aumenta el tamaño de los datos.
 
-public class ComplejidadLogaritmica {
+En este caso, se implementa una búsqueda lineal, que es un algoritmo básico para encontrar un elemento dentro de un arreglo. A diferencia de la búsqueda binaria, este método no requiere que los datos estén ordenados, ya que revisa cada elemento uno por uno desde el inicio.
 
-    public void ejemplo() {
+El programa trabaja con un arreglo de objetos `Persona`, donde cada objeto contiene un nombre. El algoritmo compara cada nombre con el valor que se desea encontrar.
 
-        // Arreglo ordenado (requisito para usar búsqueda binaria)
-        // Cada número representa una "persona"
-        int[] personas = {1, 2, 3, 4, 5, 6, 7};
+En lugar de dividir el problema como en la búsqueda binaria, aquí el algoritmo recorre todo el arreglo secuencialmente hasta encontrar el elemento o llegar al final.
 
-        // Valor que queremos buscar (Persona 4)
-        int objetivo = 4;
+## Funcionamiento del algoritmo
 
-        // Variable que indica el inicio del rango de búsqueda
-        int inicio = 0;
+1. Se crea un arreglo de personas con nombres.
+2. Se define el nombre que se desea buscar.
+3. Se inicia el recorrido desde la posición 0.
+4. En cada iteración:
+   - Se muestra el elemento actual.
+   - Se compara con el valor buscado.
+5. Si se encuentra coincidencia:
+   - Se imprime la posición.
+   - El algoritmo se detiene con `break`.
+6. Si no se encuentra:
+   - El recorrido continúa hasta el final del arreglo.
 
-        // Variable que indica el final del rango de búsqueda
-        int fin = personas.length - 1;
+## Justificación de la complejidad O(n)
 
-        // Este ciclo es donde ocurre la complejidad O(log n)
-        // Se repite mientras exista un rango válido
-        while (inicio <= fin) {
+- El algoritmo revisa los elementos uno por uno.
+- En el peor de los casos, recorre todo el arreglo.
+- El número de operaciones depende directamente del tamaño del arreglo (n).
+- A mayor número de elementos, mayor tiempo de ejecución.
+- El crecimiento del algoritmo es lineal.
 
-            // Se calcula el punto medio del arreglo
-            // Sirve para dividir el problema en dos partes
-            int medio = (inicio + fin) / 2;
+## Ejemplo
 
-            // Se compara el valor del medio con el objetivo
-            if (personas[medio] == objetivo) {
+Arreglo:
+```
+Juan, Maria, Pedro
+```
 
-                // Si coincide, se encontró el elemento
-                // El algoritmo termina aquí
-                System.out.println("Persona encontrada en posición: " + medio);
-                return;
-            } 
-            
-            // Si el valor del medio es menor que el objetivo
-            else if (personas[medio] < objetivo) {
+Elemento buscado:
+```
+Maria
+```
 
-                // Significa que el objetivo está en la mitad derecha
-                // Se descarta toda la mitad izquierda
-                inicio = medio + 1;
-            } 
-            
-            // Si el valor del medio es mayor que el objetivo
-            else {
+Proceso:
+```
+Posición 0 → Juan (no coincide)
+Posición 1 → Maria (coincide → se detiene)
+```
 
-                // Significa que el objetivo está en la mitad izquierda
-                // Se descarta toda la mitad derecha
-                fin = medio - 1;
-            }
-        }
+Resultado:
+```
+Encontrado en posición: 1
+```
 
-        // Si termina el ciclo sin encontrar el elemento
-        System.out.println("Persona no encontrada");
-    }
-}
+# 2. Complejidad O(1) – Constante
 
-## 2.Complejidad O(n) – Lineal
+La complejidad O(1) (constante) describe algoritmos cuyo tiempo de ejecución no cambia, sin importar el tamaño de los datos.
 
-La complejidad O(n) (lineal) describe algoritmos cuyo tiempo de ejecución crece de forma proporcional al tamaño de los datos.
+En este caso, se implementa un acceso directo a un elemento dentro de un arreglo. A diferencia de otros algoritmos como la búsqueda lineal o binaria, aquí no es necesario recorrer ni analizar múltiples elementos, ya que se accede directamente a una posición específica.
 
-En este caso, se implementa una búsqueda lineal, que consiste en recorrer todos los elementos de un arreglo hasta encontrar el valor deseado. A diferencia de la búsqueda binaria, aquí no se descartan elementos, sino que se revisan uno por uno.
+El programa trabaja con un arreglo de números y obtiene el valor ubicado en una posición fija (índice 0).
 
-public class ComplejidadLineal {
+Debido a que siempre se realiza una única operación, el tiempo de ejecución permanece constante.
 
-    public void ejemplo() {
+## Funcionamiento del algoritmo
 
-        // Arreglo de personas (no necesita estar ordenado)
-        // Cada número representa una "persona"
-        int[] personas = {1, 2, 3, 4, 5, 6, 7};
+1. Se crea un arreglo con varios números.
+2. Se muestra el contenido del arreglo.
+3. Se accede directamente a una posición específica (posición 0).
+4. Se imprime el valor almacenado en esa posición.
 
-        // Valor que queremos buscar (Persona 4)
-        int objetivo = 4;
+## ¿Por qué es O(1)?
 
-        // Este ciclo es donde ocurre la complejidad O(n)
-        // Se recorre el arreglo completo si es necesario
-        for (int i = 0; i < personas.length; i++) {
+- El algoritmo realiza una sola operación.
+- No recorre el arreglo.
+- No depende del tamaño de los datos.
+- Siempre accede a la misma posición.
+- El tiempo de ejecución es constante.
 
-            // Se compara cada elemento con el objetivo
-            if (personas[i] == objetivo) {
+## Ejemplo
 
-                // Si coincide, se encontró el elemento
-                System.out.println("Persona encontrada en posición: " + i);
-                return;
-            }
-        }
+Arreglo:
+```
+10, 20, 30, 40, 50
+```
 
-        // Si termina el ciclo sin encontrar el elemento
-        System.out.println("Persona no encontrada");
-    }
-}
+Proceso:
+```
+Acceso directo a la posición 0
+```
 
-### 3.Complejidad O(1) – Constante
-
-La complejidad O(1), también conocida como complejidad constante, describe algoritmos cuyo tiempo de ejecución permanece igual sin importar el tamaño de los datos de entrada.
-
-Esto significa que el algoritmo siempre ejecuta la misma cantidad de operaciones, independientemente de si trabaja con pocos o muchos elementos.
-
-En este caso, se implementa un ejemplo simple de acceso directo a un elemento dentro de un arreglo. El algoritmo no necesita recorrer toda la estructura de datos, ya que accede inmediatamente a una posición específica mediante su índice.
-
-public class ComplejidadConstante {
-
-    public void ejemplo() {
-
-        // Se crea un arreglo con varios números
-        // Cada posición almacena un valor específico
-        int[] numeros = {10, 20, 30, 40, 50};
-
-        /*
-         * Acceso directo a la posición 0 del arreglo.
-         *
-         * Aquí ocurre la complejidad O(1),
-         * porque el programa obtiene el dato
-         * inmediatamente sin recorrer el arreglo.
-         */
-        System.out.println(numeros[0]);
-
-        /*
-         * ¿Por qué es O(1)?
-         *
-         * - El número de operaciones es fijo.
-         * - No existen ciclos ni repeticiones.
-         * - No importa cuántos elementos tenga el arreglo.
-         * - El acceso al dato siempre es inmediato.
-         *
-         * Aunque el arreglo tenga:
-         * 5 elementos,
-         * 100 elementos,
-         * o 1 millón,
-         * el tiempo de ejecución prácticamente no cambia.
-         */
-    }
-}
-
-#### 4.Complejidad O(n²) – Cuadrática
+Resultado:
+```
+Elemento en posición 0: 10
+```
+# 3. Complejidad O(n²) – Cuadrática
 
 La complejidad O(n²) (cuadrática) describe algoritmos cuyo tiempo de ejecución crece proporcionalmente al cuadrado del tamaño de los datos.
 
-En este caso, se utilizan dos bucles anidados, lo que provoca que por cada elemento del arreglo se recorran nuevamente todos los elementos. Esto hace que el número de operaciones aumente rápidamente.
+En este caso, se implementa un algoritmo que utiliza ciclos anidados para recorrer un arreglo. Esto significa que por cada elemento del arreglo, se vuelve a recorrer todo el arreglo nuevamente.
 
-public class ComplejidadCuadratica {
+El programa trabaja con un arreglo de números y compara cada elemento con todos los demás, contando cuántas operaciones se realizan en total.
 
-    public void ejemplo() {
+Debido a esta estructura, el número de operaciones aumenta rápidamente a medida que crece el tamaño del arreglo.
 
-        // Arreglo de datos (n es el tamaño de la entrada)
-        int[] n = {5, 10, 3};
+## Funcionamiento del algoritmo
 
-        int tam = n.length;
+1. Se crea un arreglo de números.
+2. Se obtiene el tamaño del arreglo.
+3. Se inicializa un contador de operaciones.
+4. Se ejecuta un primer ciclo (externo) que recorre el arreglo.
+5. Dentro de este, se ejecuta un segundo ciclo (interno):
+   - Se compara cada posición con todas las demás.
+   - Se incrementa el contador de operaciones.
+6. Al final, se muestra el total de operaciones realizadas.
 
-        // Contador de operaciones
-        int operaciones = 0;
+## ¿Por qué es O(n²)?
 
-        // Este doble ciclo es donde ocurre la complejidad O(n²)
-        for (int i = 0; i < tam; i++) {
+- El algoritmo tiene dos ciclos anidados.
+- Por cada iteración del ciclo externo, el ciclo interno se ejecuta completamente.
+- El número total de operaciones es n × n.
+- A medida que crece el tamaño del arreglo, las operaciones aumentan de forma cuadrática.
+- El tiempo de ejecución crece rápidamente.
 
-            // Por cada elemento, se recorre todo el arreglo otra vez
-            for (int j = 0; j < tam; j++) {
+## Ejemplo
 
-                // Se incrementa el contador en cada iteración
-                operaciones++;
-            }
-        }
+Arreglo:
+```
+5, 10, 3
+```
 
-        // Se muestra el total de operaciones realizadas
-        System.out.println("Operaciones: " + operaciones);
-    }
-}
-##### 5.Complejidad O(n log n) – Lineal Logarítmica
+Proceso:
+```
+i = 0 → j = 0,1,2
+i = 1 → j = 0,1,2
+i = 2 → j = 0,1,2
+```
+
+Resultado:
+```
+Total de operaciones: 9
+```
+# 4. Complejidad O(log n) – Logarítmica
+
+La complejidad O(log n) (logarítmica) describe algoritmos cuyo tiempo de ejecución crece de forma muy lenta a medida que aumenta el tamaño de los datos.
+
+En este caso, se implementa una búsqueda binaria, un algoritmo eficiente para encontrar un elemento dentro de un arreglo ordenado. A diferencia de la búsqueda lineal, este método divide el problema en dos partes en cada iteración, descartando la mitad de los datos.
+
+El programa trabaja con un arreglo ordenado de números y busca un valor específico (Persona 4), reduciendo progresivamente el rango de búsqueda.
+
+Debido a esta estrategia, el número de operaciones disminuye considerablemente en comparación con otros algoritmos.
+
+## Funcionamiento del algoritmo
+
+1. Se crea un arreglo ordenado de números.
+2. Se define el valor que se desea buscar.
+3. Se establecen dos variables:
+   - `inicio` (posición inicial)
+   - `fin` (posición final)
+4. Mientras exista un rango válido (`inicio <= fin`):
+   - Se calcula la posición media.
+   - Se compara el valor medio con el objetivo.
+   - Si coincide:
+     - Se muestra la posición.
+     - El algoritmo termina.
+   - Si es menor:
+     - Se descarta la mitad izquierda.
+   - Si es mayor:
+     - Se descarta la mitad derecha.
+5. Si no se encuentra, se muestra un mensaje indicando que no existe.
+
+## ¿Por qué es O(log n)?
+
+- En cada iteración se divide el arreglo en dos partes.
+- Se elimina la mitad de los datos en cada paso.
+- El número de operaciones crece de forma logarítmica.
+- Es mucho más eficiente que recorrer todo el arreglo.
+- El tiempo de ejecución aumenta muy lentamente.
+
+## Ejemplo
+
+Arreglo:
+```
+1, 2, 3, 4, 5, 6, 7
+```
+
+Elemento buscado:
+```
+4
+```
+
+Proceso:
+```
+Rango [0-6] → medio = 3 → valor = 4 (encontrado)
+```
+
+Resultado:
+```
+Persona encontrada en posición: 3
+```
+
+
+# 5.Complejidad O(n log n) 
 
 La complejidad O(n log n) describe algoritmos cuyo tiempo de ejecución combina un crecimiento lineal con uno logarítmico.
 

@@ -1,10 +1,18 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        // new ComplejidadConstante().ejemplo();
-        // new ComplejidadLineal().ejemplo();
+        System.out.println("Complejidad Cuadratica");
         new ComplejidadCuadratica().ejemplo();
+        System.out.println("");
+        System.out.println("Complejidad Logaritmica");
         new ComplejidadLogaritmica().Ejemplo();
-        
+        System.out.println("");
+        System.out.println("Complejidad Constante");
+        new ComplejidadConstante().ejemplo();
+        System.out.println("");
+        System.out.println("Complejidad Lineal");
+        new ComplejidadLineal().ejemplo();
+        System.out.println("");
+        System.out.println("Complejidad O(n log n)");
         EjemploNlogN obj = new EjemploNlogN();
         obj.ejecutar();
     }
