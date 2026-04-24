@@ -17,7 +17,7 @@ Los algoritmos eficientes permiten que las aplicaciones funcionen correctamente 
 
 # 2. Conceptos de Eficiencia en Algoritmos
 
-##¿Qué es un algoritmo eficiente?
+## ¿Qué es un algoritmo eficiente?
 
 Un algoritmo eficiente es aquel que resuelve un problema correctamente utilizando la menor cantidad posible de tiempo y memoria.
 
